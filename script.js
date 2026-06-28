@@ -9,6 +9,7 @@ console.log(secretWord)
 
 
 document.getElementById('word-display').textContent = displayWord();
+createLetterButtons()
 })
 
 
@@ -32,3 +33,19 @@ return displayArray.join(' ');
 }
 
 
+let createLetterButtons = () => {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const buttonContainer = document.getElementById('letter-buttons');
+  buttonContainer.innerHTML = '';
+  for (let letter of alphabet) {
+    const button = document.createElement('button');
+    button.textContent = letter;
+   button.addEventListener('click', () => {
+   guessedLetters.push(letter); 
+   if(secretWord.includes(letter)){
+   document.getElementById('word-display').textContent = displayWord();
+}else{console.log("wrong guess")}
+
+});
+    buttonContainer.appendChild(button);
+  }}
