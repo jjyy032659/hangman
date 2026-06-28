@@ -1,0 +1,26 @@
+body{
+text-align: center;
+font-family: sans-serif;
+}
+
+#hangman-img-container{
+    margin: 0 auto;
+
+}
+
+#word-display{
+    font-size: 2em;
+    letter-spacing: 0.5em;
+    margin-top: 20px;
+}   
+
+#letter-buttons{
+   margin: 4px; 
+   padding: 8px 12px;
+}   
+
+.guessed{
+    background-color: #ccc;
+    border-color: #ccc; 
+    cursor: not-allowed;
+}
